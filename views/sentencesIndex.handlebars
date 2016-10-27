@@ -2,12 +2,14 @@
   <h1> Make a Sentence</h1>
   <p> Make a sentence using some random slang from urban dictionary </p>
 </header>
-{{#each sentences}}
- <a href="#">
- <div class ="sentence">
-  <h1>My Sentence...</h1>
-  <h2>{{word}}</h2>
-   <p>{{sentence}}</p>
-  </div>
-</a>
+<div class="sentencesBox">
+  {{#each sentences}}
+   <a href="#">
+     <div class ="sentence">
+      <h1>My Sentence...</h1>
+      <h2>{{word}}</h2>
+       <p>{{sentence}}</p>
+    </div>
+  </a>
  {{/each}}
+</div>
