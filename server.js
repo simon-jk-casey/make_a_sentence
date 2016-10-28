@@ -6,6 +6,7 @@ var app = express()
 //APP ENGINE:
 app.engine('handlebars', expresshbs({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
+app.use(express.static(__dirname + '/public'));
 
 var data = {
   sentences: [
