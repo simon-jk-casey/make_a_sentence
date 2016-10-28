@@ -5,6 +5,7 @@
 
 body {
   font-family: sans-serif;
+  text-align: center;
 }
 
 .container {
@@ -17,10 +18,24 @@ header {
   background-color: #1abc9c;
   color: white;
   padding: 50px;
+  margin-bottom: 50px;
+}
+
+p, h1, h2, h3 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
   font-size: 15px;
+}
+
+textarea {
+  width: 70%;
+  height: 70px;
+  font-size: 20px;
 }
 
 .title {

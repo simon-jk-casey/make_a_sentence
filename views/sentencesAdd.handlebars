@@ -1,8 +1,7 @@
-<h1>Make a sentence</h1>
 <h2>Your word is: <b>{{word}}</b>, now make some magic!</h2>
 <p>Definition: {{definition}}</p>
 <form class="new_sentence" id="new_sentence" action="/sentences" accept-charset="UTF-8" method="post">
-  <h1>Countdown Clock</h1>
+  <h2>Countdown Clock</h2>
     <div class="timer">
       <h3>Timer</h3>
       <progress value="0" max="20" id="progressBar"></progress>
@@ -15,6 +14,7 @@
 </p>
 
 </form>
+
 <script>
   var timeleft = 20;
   var downloadTimer = setInterval(function(){
@@ -23,7 +23,6 @@
      clearInterval(downloadTimer);
   },1000);
   if(value === 0){
-
   }
 </script>
 <a class="link" href="/">Cancel</a>
