@@ -1,7 +1,15 @@
 <h1>Make a sentence</h1>
 <h2>Your word is: <b>{{word}}</b>, now make some magic!</h2>
+<p>Definition: {{definition}}</p>
 <form class="new_sentence" id="new_sentence" action="/sentences" accept-charset="UTF-8" method="post">
+  <h1>Countdown Clock</h1>
+  <div id="clockdiv">
+    <div>
+    <div>
+      <span class="seconds"></span>
 
+    </div>
+  </div>
 <p>
   <textarea placeholder="Your sentence" name="life_story" id="cat_life_story">
   </textarea><br><br>
@@ -11,3 +19,4 @@
 </form>
 
 <a class="link" href="/">Cancel</a>
+<script src="../test/test.js" type="text/javascript"></script>
