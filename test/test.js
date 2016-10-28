@@ -28,5 +28,5 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = new Date(Date.parse(new Date()) + 1 * 1 * 1 * 15 * 1000);
+var deadline = new Date(Date.parse(new Date()) + 1 * 1 * 1 * 15 * 1000); //dhms change the 15
 initializeClock('clockdiv', deadline);
