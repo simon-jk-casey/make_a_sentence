@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/simon-jk-casey/make_a_sentence/issues"
   },
-  "homepage": "https://github.com/simon-jk-casey/make_a_sentence#readme"
+  "homepage": "https://github.com/simon-jk-casey/make_a_sentence#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
