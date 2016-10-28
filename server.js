@@ -1,5 +1,6 @@
 var express = require('express')
 var expresshbs = require('express-handlebars')
+var getRandomWord = require('./api/getRandomWord')
 
 var app = express()
 
@@ -21,10 +22,16 @@ var data = {
   }
 ]}
 
+
+var newWordObj = {}
+getRandomWord(function(res){
+  newWordObj = res
+})
+
 app.listen(3000, function() {
   console.log("example app listening on port 3000!")
 })
 
 app.get('/', function (req,res) {
-  res.render('sentencesAdd', data.sentences[0])
+  res.render('sentencesAdd', newWordObj)
 })
