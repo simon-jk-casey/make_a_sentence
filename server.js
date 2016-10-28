@@ -1,12 +1,17 @@
 var express = require('express')
 var expresshbs = require('express-handlebars')
 var getRandomWord = require('./api/getRandomWord')
+var bodyParser = require('body-parser')
+
 
 var app = express()
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 //APP ENGINE:
 app.engine('handlebars', expresshbs({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
+app.use(express.static(__dirname + '/public'));
 
 var data = {
   sentences: [
@@ -36,7 +41,8 @@ app.get('/', function (req,res) {
   res.render('sentencesAdd', newWordObj)
 })
 
-app.post('/sentence', function (req,res){
-  newWordObj.sentence = req.body.newSent
+app.post('/sentences', function (req,res){
+console.log(req.body)
+  newWordObj.sentence = req.body.life_story
   res.render('sentencesIndex', newWordObj)
 })
