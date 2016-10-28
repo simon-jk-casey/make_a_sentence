@@ -20,9 +20,7 @@
   var downloadTimer = setInterval(function(){
    document.getElementById("progressBar").value = 20 - --timeleft;
    if(timeleft <= 0)
-     clearInterval(downloadTimer);
+     window.location = '/sentences'
   },1000);
-  if(value === 0){
-  }
 </script>
 <a class="link" href="/">Cancel</a>
