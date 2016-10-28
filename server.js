@@ -35,3 +35,8 @@ app.listen(3000, function() {
 app.get('/', function (req,res) {
   res.render('sentencesAdd', newWordObj)
 })
+
+app.post('/sentence', function (req,res){
+  newWordObj.sentence = req.body.newSent
+  res.render('sentencesIndex', newWordObj)
+})
