@@ -2,15 +2,14 @@ var express = require('express')
 var expresshbs = require('express-handlebars')
 var getRandomWord = require('./api/getRandomWord')
 var bodyParser = require('body-parser')
-
-
 var app = express()
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+
 
 //APP ENGINE:
 app.engine('handlebars', expresshbs({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(__dirname + '/public'));
 
 var data = {
@@ -45,4 +44,8 @@ app.post('/sentences', function (req,res){
 console.log(req.body)
   newWordObj.sentence = req.body.life_story
   res.render('sentencesIndex', newWordObj)
+})
+
+app.get('/sentences/looser', function(req, res) {
+  res.render('sentencesLost')
 })
