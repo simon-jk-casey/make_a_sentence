@@ -28,20 +28,20 @@ var data = {
 
 
 var newWordObj = {}
-getRandomWord(function(res){
-  newWordObj = res
-})
+
 
 app.listen(3000, function() {
   console.log("example app listening on port 3000!")
 })
 
 app.get('/', function (req, res) {
-  res.render('sentencesAdd', newWordObj)
+  getRandomWord(function(response){
+    newWordObj = response
+    res.render('sentencesAdd', newWordObj)
+  })
 })
 
 app.post('/sentences', function (req, res){
-console.log(req.body)
   newWordObj.sentence = req.body.newSentence
   res.render('sentencesIndex', newWordObj)
 })
