@@ -46,6 +46,6 @@ app.post('/sentences', function (req, res){
   res.render('sentencesIndex', newWordObj)
 })
 
-app.get('/sentences/looser', function(req, res) {
+app.get('/sentences/loser', function(req, res) {
   res.render('sentencesLost')
 })
