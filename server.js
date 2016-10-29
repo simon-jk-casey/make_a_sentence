@@ -31,7 +31,7 @@ var newWordObj = {}
 
 
 app.listen(3000, function() {
-  console.log("example app listening on port 3000!")
+  console.log("server listening on port 3000!")
 })
 
 app.get('/', function (req, res) {
